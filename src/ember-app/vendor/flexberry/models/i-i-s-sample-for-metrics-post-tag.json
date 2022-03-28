@@ -1,0 +1,77 @@
+﻿{
+  "name": "IISSampleForMetricsPostTag",
+  "modelName": "i-i-s-sample-for-metrics-post-tag",
+  "className": "PostTag",
+  "nameSpace": "IIS.SampleForMetrics",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "order",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "tagType",
+      "relatedTo": "i-i-s-sample-for-metrics-tag-type",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "blogPost",
+      "relatedTo": "i-i-s-sample-for-metrics-blog-post",
+      "inverse": "postTag"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "PostTagE",
+      "modelName": "i-i-s-sample-for-metrics-post-tag",
+      "attrs": [
+        {
+          "name": "order",
+          "caption": "Order",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "TagType",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Tag type",
+          "name": "tagType",
+          "relatedTo": "i-i-s-sample-for-metrics-tag-type",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

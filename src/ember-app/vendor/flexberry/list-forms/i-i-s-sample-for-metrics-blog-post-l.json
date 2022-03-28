@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-sample-for-metrics-blog-post-e",
+  "editForm": "i-i-s-sample-for-metrics-blog-post-e",
+  "external": false,
+  "caption": "Blog post",
+  "name": "IISSampleForMetricsBlogPostL",
+  "className": "BlogPostL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sample-for-metrics-blog-post",
+      "modelProjection": "BlogPostL"
+    }
+  ]
+}

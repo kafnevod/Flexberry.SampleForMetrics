@@ -1,0 +1,9 @@
+﻿{
+  "nameSpace": "IIS.SampleForMetrics",
+  "className": "PostStatus",
+  "enumObjects": {
+    "Draft": "",
+    "Published": "",
+    "Deleted": ""
+  }
+}

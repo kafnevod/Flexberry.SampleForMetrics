@@ -1,0 +1,162 @@
+﻿{
+  "name": "IISSampleForMetricsBlogPost",
+  "modelName": "i-i-s-sample-for-metrics-blog-post",
+  "className": "BlogPost",
+  "nameSpace": "IIS.SampleForMetrics",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "text",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "flexberryType": "NullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "postStatus",
+      "type": "i-i-s-sample-for-metrics-post-status",
+      "flexberryType": "PostStatus",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "postAuthor",
+      "relatedTo": "i-i-s-sample-for-metrics-post-author",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "postTag",
+      "relatedTo": "i-i-s-sample-for-metrics-post-tag",
+      "inverse": "blogPost"
+    }
+  ],
+  "projections": [
+    {
+      "name": "BlogPostE",
+      "modelName": "i-i-s-sample-for-metrics-blog-post",
+      "attrs": [
+        {
+          "name": "text",
+          "caption": "Text",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "date",
+          "caption": "Date",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "postStatus",
+          "caption": "Post status",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "PostAuthor",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Post author",
+          "name": "postAuthor",
+          "relatedTo": "i-i-s-sample-for-metrics-post-author",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "PostTagE",
+          "caption": "Post tag",
+          "name": "postTag",
+          "relatedTo": "i-i-s-sample-for-metrics-post-tag",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "BlogPostL",
+      "modelName": "i-i-s-sample-for-metrics-blog-post",
+      "attrs": [
+        {
+          "name": "text",
+          "caption": "Text",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "date",
+          "caption": "Date",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "postStatus",
+          "caption": "Post status",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "PostAuthor",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Name",
+          "name": "postAuthor",
+          "relatedTo": "i-i-s-sample-for-metrics-post-author",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

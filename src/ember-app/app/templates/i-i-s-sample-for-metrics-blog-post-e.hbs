@@ -1,0 +1,90 @@
+<h3 class="ui header">{{t "forms.i-i-s-sample-for-metrics-blog-post-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.text
+      class=(if (v-get validationModel "text" "isInvalid") "error")
+      label=(t "forms.i-i-s-sample-for-metrics-blog-post-e.text-caption")
+      data-test-i-i-s-sample-for-metrics-blog-post-e-text=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "text" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sample-for-metrics-blog-post-e.date-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.date
+      class=(if (v-get validationModel "date" "isInvalid") "error")
+      data-test-i-i-s-sample-for-metrics-blog-post-e-date=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "date" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-sample-for-metrics-blog-post-e-postStatus="true">
+    <label>{{t "forms.i-i-s-sample-for-metrics-blog-post-e.postStatus-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-sample-for-metrics-post-status")
+      value=model.postStatus
+      class=(if (v-get validationModel "postStatus" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "postStatus" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sample-for-metrics-blog-post-e.postAuthor-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.postAuthor
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="postAuthor"
+      projection="PostAuthorL"
+      title=(t "forms.i-i-s-sample-for-metrics-blog-post-e.postAuthor-caption")
+      readonly=readonly
+      componentName="postAuthorLookup"
+      class=(if (v-get validationModel "postAuthor" "isInvalid") "error")
+      data-test-i-i-s-sample-for-metrics-blog-post-e-postAuthor=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "postAuthor" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-sample-for-metrics-blog-post-e.postTag-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="postTagGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.postTag
+      content=model.postTag
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "postTag" "isInvalid") "error")
+      data-test-i-i-s-sample-for-metrics-blog-post-e-postTag=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "postTag" "message")}}
+  </div>
+</form>

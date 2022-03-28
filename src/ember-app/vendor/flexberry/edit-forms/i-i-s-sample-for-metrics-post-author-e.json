@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Post author",
+  "name": "IISSampleForMetricsPostAuthorE",
+  "className": "PostAuthorE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sample-for-metrics-post-author",
+      "modelProjection": "PostAuthorE"
+    }
+  ]
+}

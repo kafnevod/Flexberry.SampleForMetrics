@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-sample-for-metrics-tag-type-e",
+  "editForm": "i-i-s-sample-for-metrics-tag-type-e",
+  "external": false,
+  "caption": "Tag type",
+  "name": "IISSampleForMetricsTagTypeL",
+  "className": "TagTypeL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sample-for-metrics-tag-type",
+      "modelProjection": "TagTypeL"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Sample for metrics",
+  "applicationTitle": "Sample for metrics",
+  "items": [
+    {
+      "link": null,
+      "menuName": "sample-for-metrics",
+      "caption": "SampleForMetrics",
+      "title": "SampleForMetrics",
+      "children": [
+        {
+          "link": "i-i-s-sample-for-metrics-post-author-l",
+          "menuName": null,
+          "caption": "Post author",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sample-for-metrics-blog-post-l",
+          "menuName": null,
+          "caption": "Blog post",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-sample-for-metrics-tag-type-l",
+          "menuName": null,
+          "caption": "Tag type",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "PostAuthor",
+      "projection": "PostAuthorL",
+      "detailModelName": null
+    },
+    {
+      "master": "tagType",
+      "displayAttributeName": "name",
+      "required": true,
+      "relationName": "PostTag.TagType",
+      "projection": "TagTypeL",
+      "detailModelName": "i-i-s-sample-for-metrics-post-tag"
+    }
+  ],
+  "external": false,
+  "caption": "Blog post",
+  "name": "IISSampleForMetricsBlogPostE",
+  "className": "BlogPostE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sample-for-metrics-blog-post",
+      "modelProjection": "BlogPostE"
+    }
+  ]
+}

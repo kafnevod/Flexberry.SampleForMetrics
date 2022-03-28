@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-sample-for-metrics-post-author-e",
+  "editForm": "i-i-s-sample-for-metrics-post-author-e",
+  "external": false,
+  "caption": "Post author",
+  "name": "IISSampleForMetricsPostAuthorL",
+  "className": "PostAuthorL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sample-for-metrics-post-author",
+      "modelProjection": "PostAuthorL"
+    }
+  ]
+}

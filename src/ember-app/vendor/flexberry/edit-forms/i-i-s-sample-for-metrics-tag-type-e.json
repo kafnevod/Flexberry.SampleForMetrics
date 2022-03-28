@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Tag type",
+  "name": "IISSampleForMetricsTagTypeE",
+  "className": "TagTypeE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-sample-for-metrics-tag-type",
+      "modelProjection": "TagTypeE"
+    }
+  ]
+}
