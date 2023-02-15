@@ -2,15 +2,17 @@
 
 services:
   app:
-    image: sampleformetrics/app
+    image: ${REGISTRY}/sampleformetrics/app
     links:
       - app-postgres-db:app-postgres-db
     ports:
-      - 80:80
+    #   - 80:80
+    network_mode: podman
 
   app-postgres-db:
-    image: sampleformetrics/postgre-sql
+    image: ${REGISTRY}/sampleformetrics/postgre-sql
     volumes:
       - DB:/var/lib/pgsql/data/
+    network_mode: podman
 volumes:
   DB:

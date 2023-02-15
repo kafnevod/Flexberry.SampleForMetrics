@@ -1,3 +1,6 @@
-docker build --no-cache -f SQL\Dockerfile.PostgreSql -t sampleformetrics/postgre-sql ../SQL
+alias docker=podman
+REPOSITORY=dh.ics.perm.ru
 
-docker build --no-cache -f Dockerfile -t sampleformetrics/app ../..
+docker build  -f SQL/Dockerfile.PostgreSql -t $REPOSITORY/sampleformetrics/postgre-sql ../SQL
+
+docker build  -f Dockerfile -t $REPOSITORY/sampleformetrics/app ../..
