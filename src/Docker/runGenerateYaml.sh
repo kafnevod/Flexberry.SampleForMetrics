@@ -1,2 +1,2 @@
 #!/bin/sh
-podman kube generate --service pod_sampleformetrics
+podman kube generate --service pod-sampleformetrics
